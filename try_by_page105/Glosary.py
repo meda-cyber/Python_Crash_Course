@@ -62,3 +62,69 @@ for alien in aliens[:5]:
         alien["speed"] = "medium"
         alien["point"] = 10
 print(aliens)
+
+#
+first_name = "Medhanie"
+last_name = "Desale"
+print("my name is {} {}".format(first_name, last_name))
+print(first_name.upper() + " " + last_name.upper())
+print(first_name.lower() + " " + last_name.lower())
+# casefold
+name = "Müller"
+print(name.casefold())
+# center
+# print(first_name.center(width[,fillchar]))
+# count
+print(first_name.count("e"))
+# encode
+print(first_name.encode())
+# slicing
+verse = "If you can keep your head when all about you\n  Are losing theirs and blaming it on you,\nIf you can trust yourself when all men doubt you,\n  But make allowance for their doubting too;\nIf you can wait and not be tired by waiting,\n  Or being lied about, don’t deal in lies,\nOr being hated, don’t give way to hating,\n  And yet don’t look too good, nor talk too wise:"
+
+print(verse)
+print("\n The length of the sentence is: {} ".format(len(verse)))
+print("The index of first occurence of and {}: ".format(verse.index("and")))
+print(verse.rfind("you"))
+print("The number of you in the sentence {}: ".format(verse.count("you")))
+
+print(list(range(0, -5)))
+# for loop with html tags
+items = ['first string', 'second string']
+html_str = "<ul>\n"  # "\ n" is the character that marks the end of the line, it does
+# the characters that are after it in html_str are on the next line
+
+# write your code here
+for item in items:
+    html_str += "<li> {} </li> \n".format(item)
+
+html_str += "</ul>"
+
+
+print(html_str)
+
+# word frequency with dict
+book_title = ["great", "expectation", "the", "adventures", "of", "sherlock",
+              "holmes", "hamlet", "huckleberry", "fin", "gasby", "the", "sherlock"]
+word_counter = {}
+for word in book_title:
+    if not word in word_counter:
+        word_counter[word] = 1
+
+    else:
+        word_counter[word] += 1
+
+print(word_counter)
+# sentence
+sentence = "The black panter has been very famous during the last summer and has been watched through out the world"
+# finding words how many times repeated
+list_of_sentence = sentence.title().split()
+print(list_of_sentence)
+
+freq_word = {}
+for word in list_of_sentence:
+    if word not in freq_word:
+        freq_word[word] = 1
+    else:
+        freq_word[word] += 1
+
+print(freq_word)
